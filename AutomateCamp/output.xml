@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-16T17:43:11.330285" rpa="false" schemaversion="5">
+<suite id="s1" name="AT 5" source="/Users/doppio/Documents/AutomateCamp/AT_5.robot">
+<test id="s1-t1" name="AT_5 : Verify and confirmed that the price of Ethereum remains at 30,000." line="90">
+<kw name="common.Open website and accept cookie" type="SETUP">
+<msg time="2026-01-16T17:43:11.349042" level="FAIL">No keyword with name 'common.Open website and accept cookie' found.</msg>
+<status status="FAIL" start="2026-01-16T17:43:11.349023" elapsed="0.000044">No keyword with name 'common.Open website and accept cookie' found.</status>
+</kw>
+<kw name="common.Close website" type="TEARDOWN">
+<msg time="2026-01-16T17:43:11.349589" level="FAIL">No keyword with name 'common.Close website' found.</msg>
+<status status="FAIL" start="2026-01-16T17:43:11.349574" elapsed="0.000034">No keyword with name 'common.Close website' found.</status>
+</kw>
+<status status="FAIL" start="2026-01-16T17:43:11.348300" elapsed="0.001356">Setup failed:
+No keyword with name 'common.Open website and accept cookie' found.
+
+Also teardown failed:
+No keyword with name 'common.Close website' found.</status>
+</test>
+<status status="FAIL" start="2026-01-16T17:43:11.331253" elapsed="0.018577"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="AT 5" id="s1" pass="0" fail="1" skip="0">AT 5</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-16T17:43:11.348064" level="ERROR">Error in file '/Users/doppio/Documents/AutomateCamp/AT_5.robot' on line 2: Resource file '/Users/doppio/Documents/keywords/import.robot' does not exist.</msg>
+</errors>
+</robot>

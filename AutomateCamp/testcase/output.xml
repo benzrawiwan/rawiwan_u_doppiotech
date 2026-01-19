@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-19T17:20:03.613984" rpa="false" schemaversion="5">
+<suite id="s1" name="AT Eval" source="/Users/doppio/Documents/AutomateCamp/testcase/AT_Eval.robot">
+<test id="s1-t1" name="TC_1 : Verify capture screen when case failed" line="8">
+<kw name="Open website and accept cookie" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:03.798450" level="INFO">Opening browser 'chrome' to base url 'https://bitazza.co.th/home'.</msg>
+<arg>${website}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-19T17:20:03.798328" elapsed="3.711249"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-19T17:20:07.511192" elapsed="0.344462"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:07.856298" level="INFO">Clicking element '//p[text()="ยอมรับการใช้งานคุกกี้"]'.</msg>
+<arg>${dict_home_page}[btn_accept_cookie]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:07.855820" elapsed="0.039297"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:03.797898" elapsed="4.097319"/>
+</kw>
+<kw name="Go to spot page" owner="home_feature">
+<kw name="Click market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:07.895970" elapsed="0.010290"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:07.906480" level="INFO">Clicking element '//button[@id="dropdown-basic"]/child::div[text()="ตลาดซื้อขาย"]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:07.906359" elapsed="0.023735"/>
+</kw>
+<arg>${dict_home_page}[btn_menubar_market_sell]</arg>
+<status status="PASS" start="2026-01-19T17:20:07.895816" elapsed="0.034343"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:07.895686" elapsed="0.034511"/>
+</kw>
+<kw name="Click dropdown market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:07.930552" elapsed="0.009233"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:07.939999" level="INFO">Clicking element '(//div[text()="ตลาดซื้อขาย"]/ancestor::div[contains(@class,"HeaderNav_DropdownItemWrapper")])[1]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:07.939884" elapsed="1.764661"/>
+</kw>
+<arg>${dict_home_page}[btn_submenu_market_sell]</arg>
+<status status="PASS" start="2026-01-19T17:20:07.930429" elapsed="1.774221"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:07.930291" elapsed="1.774415"/>
+</kw>
+<kw name="Verify display spot page" owner="spot_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:09.804250" level="INFO">Element '//a[@id="header_spot"]' is displayed.</msg>
+<arg>${dict_market_sell_page}[btn_menu_spot]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:09.705104" elapsed="0.099215"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:09.704866" elapsed="0.099541"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:07.895481" elapsed="1.908978"/>
+</kw>
+<kw name="Click menu market sell in menu bar" owner="spot_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:09.804941" elapsed="0.006876"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:09.812027" level="INFO">Clicking element '//a[@id="header_market"]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:09.811912" elapsed="0.041275"/>
+</kw>
+<arg>${dict_market_sell_page}[btn_menu_market_sell]</arg>
+<status status="PASS" start="2026-01-19T17:20:09.804796" elapsed="0.048877"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:09.804626" elapsed="0.049262"/>
+</kw>
+<kw name="Fail and capture screen" owner="market_sell_feature">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:09.855146" elapsed="0.319372"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:10.180681" level="INFO">${rows} = 122</msg>
+<var>${rows}</var>
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:10.174665" elapsed="0.006042"/>
+</kw>
+<if>
+<branch type="IF" condition="${rows} &lt; ${range}">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-01-19T17:20:10.181327" level="FAIL">all record 122 is less than 300</msg>
+<arg>all record ${rows} is less than ${range}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-01-19T17:20:10.180997" elapsed="0.000563">all record 122 is less than 300</status>
+</kw>
+<status status="FAIL" start="2026-01-19T17:20:10.180797" elapsed="0.000907">all record 122 is less than 300</status>
+</branch>
+<status status="FAIL" start="2026-01-19T17:20:10.180770" elapsed="0.000975">all record 122 is less than 300</status>
+</if>
+<arg>300</arg>
+<status status="FAIL" start="2026-01-19T17:20:09.854375" elapsed="0.327481">all record 122 is less than 300</status>
+</kw>
+<kw name="Default test teardown" owner="common" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:10.309487" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-19T17:20:10.182546" elapsed="0.127008"/>
+</kw>
+<arg>SeleniumLibrary.Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-01-19T17:20:10.182288" elapsed="0.127318"/>
+</kw>
+<kw name="Close website" owner="common">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-19T17:20:10.309885" elapsed="0.088464"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:10.309728" elapsed="0.088693"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:10.182108" elapsed="0.216341"/>
+</kw>
+<status status="FAIL" start="2026-01-19T17:20:03.797559" elapsed="6.600953">all record 122 is less than 300</status>
+</test>
+<test id="s1-t2" name="TC_2 : Verify capture screen when case passed" line="13">
+<kw name="Open website and accept cookie" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:10.399239" level="INFO">Opening browser 'chrome' to base url 'https://bitazza.co.th/home'.</msg>
+<arg>${website}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-19T17:20:10.399118" elapsed="2.026754"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-19T17:20:12.426349" elapsed="0.027325"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:12.454159" level="INFO">Clicking element '//p[text()="ยอมรับการใช้งานคุกกี้"]'.</msg>
+<arg>${dict_home_page}[btn_accept_cookie]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:12.453826" elapsed="0.037682"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:10.398951" elapsed="2.092725"/>
+</kw>
+<kw name="Go to spot page" owner="home_feature">
+<kw name="Click market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:12.492512" elapsed="0.011138"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:12.503915" level="INFO">Clicking element '//button[@id="dropdown-basic"]/child::div[text()="ตลาดซื้อขาย"]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:12.503767" elapsed="0.025755"/>
+</kw>
+<arg>${dict_home_page}[btn_menubar_market_sell]</arg>
+<status status="PASS" start="2026-01-19T17:20:12.492365" elapsed="0.037226"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:12.492243" elapsed="0.037379"/>
+</kw>
+<kw name="Click dropdown market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:12.530006" elapsed="0.008724"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:12.539040" level="INFO">Clicking element '(//div[text()="ตลาดซื้อขาย"]/ancestor::div[contains(@class,"HeaderNav_DropdownItemWrapper")])[1]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:12.538918" elapsed="1.357342"/>
+</kw>
+<arg>${dict_home_page}[btn_submenu_market_sell]</arg>
+<status status="PASS" start="2026-01-19T17:20:12.529877" elapsed="1.366465"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:12.529726" elapsed="1.366654"/>
+</kw>
+<kw name="Verify display spot page" owner="spot_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:13.979991" level="INFO">Element '//a[@id="header_spot"]' is displayed.</msg>
+<arg>${dict_market_sell_page}[btn_menu_spot]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:13.896699" elapsed="0.083352"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:13.896514" elapsed="0.083593"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:12.492006" elapsed="1.488129"/>
+</kw>
+<kw name="Click menu market sell in menu bar" owner="spot_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:13.980576" elapsed="0.011588"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:13.992425" level="INFO">Clicking element '//a[@id="header_market"]'.</msg>
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:13.992284" elapsed="0.047178"/>
+</kw>
+<arg>${dict_market_sell_page}[btn_menu_market_sell]</arg>
+<status status="PASS" start="2026-01-19T17:20:13.980447" elapsed="0.059263"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:13.980293" elapsed="0.059531"/>
+</kw>
+<kw name="Fail and capture screen" owner="market_sell_feature">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-19T17:20:14.040404" elapsed="0.301340"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-01-19T17:20:14.348205" level="INFO">${rows} = 122</msg>
+<var>${rows}</var>
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-01-19T17:20:14.341889" elapsed="0.006341"/>
+</kw>
+<if>
+<branch type="IF" condition="${rows} &lt; ${range}">
+<kw name="Fail" owner="BuiltIn">
+<arg>all record ${rows} is less than ${range}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-01-19T17:20:14.348470" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2026-01-19T17:20:14.348316" elapsed="0.000194"/>
+</branch>
+<status status="PASS" start="2026-01-19T17:20:14.348293" elapsed="0.000240"/>
+</if>
+<arg>50</arg>
+<status status="PASS" start="2026-01-19T17:20:14.040205" elapsed="0.308355"/>
+</kw>
+<kw name="Default test teardown" owner="common" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>SeleniumLibrary.Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-01-19T17:20:14.348882" elapsed="0.000200"/>
+</kw>
+<kw name="Close website" owner="common">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-19T17:20:14.349265" elapsed="0.081457"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:14.349164" elapsed="0.081632"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:14.348737" elapsed="0.082088"/>
+</kw>
+<status status="PASS" start="2026-01-19T17:20:10.398719" elapsed="4.032171"/>
+</test>
+<status status="FAIL" start="2026-01-19T17:20:03.614560" elapsed="10.816659"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="AT Eval" id="s1" pass="1" fail="1" skip="0">AT Eval</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
