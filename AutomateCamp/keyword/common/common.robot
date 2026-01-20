@@ -2,7 +2,7 @@
 Open website and accept cookie
     Open Browser    ${website}    ${browser}
     Maximize Browser Window
-    Click Element   ${dict_home_page}[btn_accept_cookie]
+    Click Element   ${dict_home_locator}[btn_accept_cookie]
 
 Click element when ready
     [Arguments]    ${element}

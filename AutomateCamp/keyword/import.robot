@@ -7,8 +7,8 @@ Variables      ${CURDIR}/../resources/settings/settings.yaml
 Variables      ${CURDIR}/../resources/testdata/testdata.yaml
 
 # Locator
-Resource      ${CURDIR}/../keyword/locator/home_locator.robot
-Resource      ${CURDIR}/../keyword/locator/market_sell_locator.robot
+Resource      ${CURDIR}/../resources/locator/home_locator.robot
+Resource      ${CURDIR}/../resources/locator/market_sell_locator.robot
 
 #keyword
 Resource       ${CURDIR}/../keyword/common/common.robot

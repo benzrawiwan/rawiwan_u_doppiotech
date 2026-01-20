@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-20T09:58:28.736823" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase" source="/Users/doppio/Documents/GitHub/rawiwan_u_doppiotech/AutomateCamp/testcase">
+<suite id="s1-s1" name="AT 5" source="/Users/doppio/Documents/GitHub/rawiwan_u_doppiotech/AutomateCamp/testcase/AT_5.robot">
+<test id="s1-s1-t1" name="AT_5 : Verify and confirmed that the price of Ethereum more than 30,000" line="7">
+<kw name="Open website and accept cookie" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${website}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.918494" elapsed="0.000053"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.918623" elapsed="0.000023"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${dict_home_locator}[btn_accept_cookie]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.918697" elapsed="0.000030"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.918084" elapsed="0.000668"/>
+</kw>
+<kw name="Go to spot page" owner="home_feature">
+<kw name="Click market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.919148" elapsed="0.000030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.919227" elapsed="0.000025"/>
+</kw>
+<arg>${dict_home_locator}[btn_menubar_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.919063" elapsed="0.000211"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.918964" elapsed="0.000330"/>
+</kw>
+<kw name="Click dropdown market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.919507" elapsed="0.000027"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.919580" elapsed="0.000024"/>
+</kw>
+<arg>${dict_home_locator}[btn_submenu_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.919434" elapsed="0.000190"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.919348" elapsed="0.000294"/>
+</kw>
+<kw name="Verify display spot page" owner="spot_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>${dict_market_sell_locator}[btn_menu_spot]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.919768" elapsed="0.000028"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.919695" elapsed="0.000122"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.918861" elapsed="0.000973"/>
+</kw>
+<kw name="Click menu market sell in menu bar" owner="spot_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.920084" elapsed="0.000029"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.920163" elapsed="0.000025"/>
+</kw>
+<arg>${dict_market_sell_locator}[btn_menu_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.920003" elapsed="0.000207"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.919913" elapsed="0.000316"/>
+</kw>
+<kw name="Get all records from table" owner="market_sell_feature">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.920427" elapsed="0.000103"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${rows}</var>
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.920587" elapsed="0.000042"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<var>${table_data}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.920677" elapsed="0.000077"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${cells}</var>
+<arg>//table[contains(@class,"table")]/tbody/tr[${row}]/td</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.920905" elapsed="0.000027"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<var>${row_data}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.920980" elapsed="0.000059"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${data_text}</var>
+<arg>//table[contains(@class,"table")]/tbody/tr[${row}]/td[${cell}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.921149" elapsed="0.000026"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${row_data}</arg>
+<arg>${data_text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.921223" elapsed="0.000032"/>
+</kw>
+<var name="${cell}"/>
+<status status="PASS" start="2026-01-20T09:58:28.921106" elapsed="0.000169"/>
+</iter>
+<var>${cell}</var>
+<value>1</value>
+<value>${cells}+1</value>
+<status status="PASS" start="2026-01-20T09:58:28.921067" elapsed="0.000233"/>
+</for>
+<kw name="Append To List" owner="Collections">
+<arg>${table_data}</arg>
+<arg>${row_data}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.921354" elapsed="0.000029"/>
+</kw>
+<var name="${row}"/>
+<status status="PASS" start="2026-01-20T09:58:28.920856" elapsed="0.000548"/>
+</iter>
+<var>${row}</var>
+<value>1</value>
+<value>${rows}+1</value>
+<status status="PASS" start="2026-01-20T09:58:28.920787" elapsed="0.000639"/>
+</for>
+<return>
+<value>${table_data}</value>
+<status status="PASS" start="2026-01-20T09:58:28.921457" elapsed="0.000017"/>
+</return>
+<var>${table_data}</var>
+<status status="PASS" start="2026-01-20T09:58:28.920347" elapsed="0.001148"/>
+</kw>
+<kw name="Verify cryotocurrency coin name" owner="market_sell_feature">
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${found}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.921799" elapsed="0.000077"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${raw}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.921992" elapsed="0.000066"/>
+</kw>
+<kw name="Split String" owner="String">
+<var>@{split_text}</var>
+<arg>${raw}</arg>
+<arg>\n</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.922107" elapsed="0.000039"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${table_coin}</var>
+<arg>${split_text}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.922193" elapsed="0.000062"/>
+</kw>
+<if>
+<branch type="IF" condition="$table_coin == $expected_coin">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${found}</var>
+<arg>True</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.922375" elapsed="0.000068"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.922318" elapsed="0.000149"/>
+</branch>
+<status status="PASS" start="2026-01-20T09:58:28.922306" elapsed="0.000184"/>
+</if>
+<var name="${row}"/>
+<status status="PASS" start="2026-01-20T09:58:28.921951" elapsed="0.000551"/>
+</iter>
+<var>${row}</var>
+<value>@{table_data}</value>
+<status status="PASS" start="2026-01-20T09:58:28.921904" elapsed="0.000618"/>
+</for>
+<var name="${expected_coin}"/>
+<status status="PASS" start="2026-01-20T09:58:28.921752" elapsed="0.000794"/>
+</iter>
+<var>${expected_coin}</var>
+<value>${cryotocurrency_name}</value>
+<status status="PASS" start="2026-01-20T09:58:28.921690" elapsed="0.000874"/>
+</for>
+<arg>${table_data}</arg>
+<arg>${AT_5}[verify cryotocurrency name]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.921622" elapsed="0.000966"/>
+</kw>
+<kw name="Verify cryptocurrency price not less than price range" owner="market_sell_feature">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${found}</var>
+<arg>False</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.922871" elapsed="0.000113"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${raw_name}</var>
+<arg>${row}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.923136" elapsed="0.000071"/>
+</kw>
+<kw name="Split String" owner="String">
+<var>@{name_parts}</var>
+<arg>${raw_name}</arg>
+<arg>\n</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.923262" elapsed="0.000041"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${coin_name}</var>
+<arg>${name_parts}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.923358" elapsed="0.000069"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${coin_name}&quot; == &quot;${cryotocurrency_name}&quot;">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${found}</var>
+<arg>True</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.923528" elapsed="0.000068"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${raw_price}</var>
+<arg>${row}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.923649" elapsed="0.000067"/>
+</kw>
+<kw name="Remove String Using Regexp" owner="String">
+<var>${clean_price}</var>
+<arg>${raw_price}</arg>
+<arg>[^0-9.]</arg>
+<arg>""</arg>
+<doc>Removes ``patterns`` from the given ``string``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.923770" elapsed="0.000043"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<var>${price}</var>
+<arg>${clean_price}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.923867" elapsed="0.000065"/>
+</kw>
+<if>
+<branch type="IF" condition="${price} &lt; ${price_range}">
+<kw name="Fail" owner="BuiltIn">
+<arg>cryotocurrency price ${price} is less than 30000</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.924018" elapsed="0.000076"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.923969" elapsed="0.000148"/>
+</branch>
+<status status="PASS" start="2026-01-20T09:58:28.923962" elapsed="0.000179"/>
+</if>
+<status status="PASS" start="2026-01-20T09:58:28.923475" elapsed="0.000677"/>
+</branch>
+<status status="PASS" start="2026-01-20T09:58:28.923465" elapsed="0.000704"/>
+</if>
+<var name="${row}"/>
+<status status="PASS" start="2026-01-20T09:58:28.923089" elapsed="0.001089"/>
+</iter>
+<var>${row}</var>
+<value>@{table_data}</value>
+<status status="PASS" start="2026-01-20T09:58:28.923017" elapsed="0.001183"/>
+</for>
+<arg>${table_data}</arg>
+<arg>${AT_5}[verity price of cryotocurrency name]</arg>
+<arg>${AT_5}[verity price_range]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.922772" elapsed="0.001456"/>
+</kw>
+<kw name="Close website" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.924441" elapsed="0.000022"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.924348" elapsed="0.000138"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.917723" elapsed="0.006797"/>
+</test>
+<status status="PASS" start="2026-01-20T09:58:28.755244" elapsed="0.169468"/>
+</suite>
+<suite id="s1-s2" name="AT Eval" source="/Users/doppio/Documents/GitHub/rawiwan_u_doppiotech/AutomateCamp/testcase/AT_Eval.robot">
+<test id="s1-s2-t1" name="TC_1 : Verify capture screen when case failed" line="7">
+<kw name="Open website and accept cookie" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${website}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.927128" elapsed="0.000038"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.927229" elapsed="0.000020"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${dict_home_locator}[btn_accept_cookie]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.927298" elapsed="0.000029"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.927020" elapsed="0.000331"/>
+</kw>
+<kw name="Go to spot page" owner="home_feature">
+<kw name="Click market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.927719" elapsed="0.000029"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.927798" elapsed="0.000026"/>
+</kw>
+<arg>${dict_home_locator}[btn_menubar_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.927630" elapsed="0.000217"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.927535" elapsed="0.000332"/>
+</kw>
+<kw name="Click dropdown market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.928093" elapsed="0.000027"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.928169" elapsed="0.000024"/>
+</kw>
+<arg>${dict_home_locator}[btn_submenu_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.928013" elapsed="0.000201"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.927924" elapsed="0.000309"/>
+</kw>
+<kw name="Verify display spot page" owner="spot_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>${dict_market_sell_locator}[btn_menu_spot]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.928368" elapsed="0.000030"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.928289" elapsed="0.000131"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.927439" elapsed="0.001010"/>
+</kw>
+<kw name="Click menu market sell in menu bar" owner="spot_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.928700" elapsed="0.000029"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.928779" elapsed="0.000025"/>
+</kw>
+<arg>${dict_market_sell_locator}[btn_menu_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.928618" elapsed="0.000209"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.928527" elapsed="0.000319"/>
+</kw>
+<kw name="Fail and capture screen" owner="market_sell_feature">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.929049" elapsed="0.000052"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${rows}</var>
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.929156" elapsed="0.000040"/>
+</kw>
+<if>
+<branch type="IF" condition="${rows} &lt; ${range}">
+<kw name="Fail" owner="BuiltIn">
+<arg>all record ${rows} is less than ${range}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.929296" elapsed="0.000094"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.929239" elapsed="0.000175"/>
+</branch>
+<status status="PASS" start="2026-01-20T09:58:28.929229" elapsed="0.000208"/>
+</if>
+<arg>300</arg>
+<status status="PASS" start="2026-01-20T09:58:28.928947" elapsed="0.000505"/>
+</kw>
+<kw name="Default test teardown" owner="common" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.930205" elapsed="0.000031"/>
+</kw>
+<arg>SeleniumLibrary.Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-01-20T09:58:28.929992" elapsed="0.000266"/>
+</kw>
+<kw name="Close website" owner="common">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.930435" elapsed="0.000024"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.930335" elapsed="0.000155"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.929846" elapsed="0.000669"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.926830" elapsed="0.003721"/>
+</test>
+<test id="s1-s2-t2" name="TC_2 : Verify capture screen when case passed" line="12">
+<kw name="Open website and accept cookie" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${website}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.930934" elapsed="0.000032"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.931021" elapsed="0.000018"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${dict_home_locator}[btn_accept_cookie]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.931095" elapsed="0.000039"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.930845" elapsed="0.000318"/>
+</kw>
+<kw name="Go to spot page" owner="home_feature">
+<kw name="Click market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.931542" elapsed="0.000030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.931630" elapsed="0.000025"/>
+</kw>
+<arg>${dict_home_locator}[btn_menubar_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.931459" elapsed="0.000218"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.931348" elapsed="0.000352"/>
+</kw>
+<kw name="Click dropdown market sell in menu bar" owner="home_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.931940" elapsed="0.000026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.932021" elapsed="0.000034"/>
+</kw>
+<arg>${dict_home_locator}[btn_submenu_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.931860" elapsed="0.000218"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.931761" elapsed="0.000336"/>
+</kw>
+<kw name="Verify display spot page" owner="spot_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>${dict_market_sell_locator}[btn_menu_spot]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.932231" elapsed="0.000031"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.932152" elapsed="0.000131"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.931250" elapsed="0.001050"/>
+</kw>
+<kw name="Click menu market sell in menu bar" owner="spot_page">
+<kw name="Click element when ready" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.932535" elapsed="0.000026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.932606" elapsed="0.000023"/>
+</kw>
+<arg>${dict_market_sell_locator}[btn_menu_market_sell]</arg>
+<status status="PASS" start="2026-01-20T09:58:28.932463" elapsed="0.000185"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.932382" elapsed="0.000284"/>
+</kw>
+<kw name="Fail and capture screen" owner="market_sell_feature">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.932843" elapsed="0.000043"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<var>${rows}</var>
+<arg>//table[contains(@class,"table")]/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.932935" elapsed="0.000038"/>
+</kw>
+<if>
+<branch type="IF" condition="${rows} &lt; ${range}">
+<kw name="Fail" owner="BuiltIn">
+<arg>all record ${rows} is less than ${range}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.933059" elapsed="0.000070"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.933011" elapsed="0.000139"/>
+</branch>
+<status status="PASS" start="2026-01-20T09:58:28.933002" elapsed="0.000167"/>
+</if>
+<arg>50</arg>
+<status status="PASS" start="2026-01-20T09:58:28.932770" elapsed="0.000412"/>
+</kw>
+<kw name="Default test teardown" owner="common" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.933496" elapsed="0.000021"/>
+</kw>
+<arg>SeleniumLibrary.Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-01-20T09:58:28.933385" elapsed="0.000151"/>
+</kw>
+<kw name="Close website" owner="common">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-01-20T09:58:28.933673" elapsed="0.000019"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.933591" elapsed="0.000121"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.933291" elapsed="0.000438"/>
+</kw>
+<status status="PASS" start="2026-01-20T09:58:28.930676" elapsed="0.003084"/>
+</test>
+<status status="PASS" start="2026-01-20T09:58:28.924924" elapsed="0.008981"/>
+</suite>
+<status status="PASS" start="2026-01-20T09:58:28.738006" elapsed="0.196122"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testcase" id="s1" pass="3" fail="0" skip="0">Testcase</stat>
+<stat name="AT 5" id="s1-s1" pass="1" fail="0" skip="0">Testcase.AT 5</stat>
+<stat name="AT Eval" id="s1-s2" pass="2" fail="0" skip="0">Testcase.AT Eval</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
