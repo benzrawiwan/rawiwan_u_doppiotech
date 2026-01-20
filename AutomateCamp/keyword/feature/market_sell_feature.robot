@@ -1,13 +1,16 @@
 *** Keywords ***
 Get all records from table
-    SeleniumLibrary.Wait Until Element Is Visible  //table[contains(@class,"table")]/tbody/tr
-    ${rows}  Get Element Count   //table[contains(@class,"table")]/tbody/tr
+    [Arguments]     ${tbl_locator}
+    SeleniumLibrary.Wait until element is visible  ${tbl_locator}
+    ${rows}  Get element count   ${tbl_locator}
     ${table_data}=  Create List
     FOR    ${row}    IN RANGE   1    ${rows}+1
-        ${cells}=   Get Element Count    //table[contains(@class,"table")]/tbody/tr[${row}]/td 
+        ${table_row}=    Set variable    ${tbl_locator}\[${row}\]/td 
+        ${cells}=   Get element count   ${table_row}
         ${row_data}=    Create List
             FOR     ${cell}    IN RANGE     1    ${cells}+1
-                ${data_text}=   Get Text    //table[contains(@class,"table")]/tbody/tr[${row}]/td[${cell}]
+                ${table_col}=    Set Variable    ${table_row}\[${cell}\]
+                ${data_text}=   Get Text    ${table_col}
                 Append To List    ${row_data}    ${data_text}
             END
         Append To List    ${table_data}    ${row_data}
@@ -48,7 +51,7 @@ Verify cryptocurrency price not less than price range
 
 Fail and capture screen
     [Arguments]    ${range}
-    SeleniumLibrary.Wait Until Element Is Visible  //table[contains(@class,"table")]/tbody/tr
+    SeleniumLibrary.Wait until element is visible  //table[contains(@class,"table")]/tbody/tr
     ${rows}  Get Element Count   //table[contains(@class,"table")]/tbody/tr
     IF    ${rows} < ${range}
         Fail    all record ${rows} is less than ${range}
