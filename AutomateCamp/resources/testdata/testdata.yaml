@@ -1,11 +1,12 @@
-Home_page:
-  menubar_a:
-    
+Home_page_menu_bar:
+  btn_market_sell: ตลาดซื้อขาย
+  btn_product: ผลิตภัณฑ์ของเรา
+  lbl_blog: Bitazza Blog
+  lbl_invite_friends: แชร์ลิงก์ชวนเพื่อน
 
-
-
-
-
+Dropdown_market_sell_menu:
+  lbl_sell_buy: ซื้อ ขาย
+  lbl_market_sell: ตลาดซื้อขาย
 
 AT_5: 
   verify cryotocurrency name: 
